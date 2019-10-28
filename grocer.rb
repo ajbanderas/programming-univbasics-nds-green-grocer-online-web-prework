@@ -56,7 +56,7 @@ def apply_coupons(cart, coupons)
     end
     index += 1 
   end
- pp cart
+ cart
 end
 
   # Consult README for inputs and outputs
@@ -64,7 +64,16 @@ end
   # REMEMBER: This method **should** update cart
   
 def apply_clearance(cart)
-
+  index = 0 
+  while index < cart.length do
+    clearance = cart[index][:clearance]
+    price = cart[index][:price]
+    if clearance == true
+      price = (price * .8)
+    end
+  index += 1
+  end
+  cart
 end
 
   # Consult README for inputs and outputs
