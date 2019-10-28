@@ -28,6 +28,8 @@ def consolidate_cart(cart)
   current_item = find_item_by_name_in_collection(item, cons_cart)
   if !current_item
     cons_cart << {:item => item, :price => price, :clearance => clearance, :count => 1}
+  else
+    current_item[:count] += 1
   end
   item_index += 1
  end
