@@ -41,8 +41,6 @@ end
   # REMEMBER: This method **should** update cart
   
 def apply_coupons(cart, coupons)
-  pp cart 
-  pp coupons
   index = 0 
   while index < coupons.length do
     coupon_item = coupons[index][:item]
@@ -58,7 +56,7 @@ def apply_coupons(cart, coupons)
     end
     index += 1 
   end
-  cart
+ pp cart
 end
 
   # Consult README for inputs and outputs
