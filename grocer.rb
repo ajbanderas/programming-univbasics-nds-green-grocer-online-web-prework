@@ -94,5 +94,6 @@ def checkout(cart, coupons)
       grand_total += (final_purchases[index][:price] * final_purchases[index][:count])
     index += 1
   end
+  if grand_total >
   grand_total
 end
