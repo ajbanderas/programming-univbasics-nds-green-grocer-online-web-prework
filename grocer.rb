@@ -43,6 +43,19 @@ end
 def apply_coupons(cart, coupons)
   pp cart 
   pp coupons
+  index = 0 
+  while index < coupons.length do
+    coupon_item = coupons[index][:item]
+    req_num = coupons[index][:num]
+    sale_price = coupons[index][:cost]
+    matching_item = find_item_by_name_in_collection(coupon_item, cart)
+    if matching_item && req_num <= matching_item[:count]
+      matching_item[:count] -= req_num
+      cart << {:item => "#{coupon_item}"}
+    end
+    index += 1 
+  end
+  cart
 end
 
   # Consult README for inputs and outputs
