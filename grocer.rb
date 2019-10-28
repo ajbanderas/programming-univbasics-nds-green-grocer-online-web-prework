@@ -64,6 +64,7 @@ end
   # REMEMBER: This method **should** update cart
   
 def apply_clearance(cart)
+  pp cart
   index = 0 
   while index < cart.length do
     clearance = cart[index][:clearance]
