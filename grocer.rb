@@ -53,9 +53,6 @@ def apply_coupons(cart, coupons)
                :price => (sale_price / req_num), 
                :clearance => matching_item[:clearance], 
                :count => req_num}
-      if matching_item[:count] == 0 
-        cart.delete(matching_item)
-      end
     end
     index += 1 
   end
