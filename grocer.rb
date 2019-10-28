@@ -75,7 +75,7 @@ def apply_clearance(cart)
     end
   index += 1
   end
-  cart
+  pp cart
 end
 
   # Consult README for inputs and outputs
