@@ -51,7 +51,10 @@ def apply_coupons(cart, coupons)
     matching_item = find_item_by_name_in_collection(coupon_item, cart)
     if matching_item && req_num <= matching_item[:count]
       matching_item[:count] -= req_num
-      cart << {:item => "#{coupon_item} W/COUPON", :price => (sale_price / req_num), :clearance => matching_item[:clearance], }
+      cart << {:item => "#{coupon_item} W/COUPON", 
+               :price => (sale_price / req_num), 
+               :clearance => matching_item[:clearance], 
+               :count => req_num}
     end
     index += 1 
   end
