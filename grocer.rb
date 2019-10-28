@@ -19,6 +19,7 @@ end
   # change `cart` (i.e. mutate) it. It's easier to return a new thing.
   
 def consolidate_cart(cart)
+  pp cart
  cons_cart = []
  item_index = 0 
  while item_index < cart.length do 
@@ -29,7 +30,6 @@ def consolidate_cart(cart)
   end
   item_index += 1
  end
- pp cons_cart
  cons_cart
 end
 
