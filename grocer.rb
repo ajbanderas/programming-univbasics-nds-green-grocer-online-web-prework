@@ -85,5 +85,7 @@ end
   # some irritated customers
   
 def checkout(cart, coupons)
-
+  grand_total = 0 
+  final_purchases = consolidate_cart(cart)
+  
 end
