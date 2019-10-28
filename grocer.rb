@@ -33,7 +33,7 @@ def consolidate_cart(cart)
   end
   item_index += 1
  end
- pp cons_cart
+ cons_cart
 end
 
   # Consult README for inputs and outputs
