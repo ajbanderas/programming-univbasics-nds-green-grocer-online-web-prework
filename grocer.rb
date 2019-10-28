@@ -26,7 +26,9 @@ def consolidate_cart(cart)
   price = cart[item_index][:price]
   clearance = cart[item_index][:clearance]
   current_item = find_item_by_name_in_collection(item, cons_cart)
-  cons_cart << item = {:price => price, :clearance => clearance, :count => 1}
+  if !current_item
+    cons_cart << {:item => item, :price => price, :clearance => clearance, :count => 1}
+  end
   item_index += 1
  end
  cons_cart
