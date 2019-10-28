@@ -19,16 +19,13 @@ end
   # change `cart` (i.e. mutate) it. It's easier to return a new thing.
   
 def consolidate_cart(cart)
-  pp cart
  cons_cart = []
  item_index = 0 
  while item_index < cart.length do 
-  item_name = cart[item_index][:item]
-  item = find_item_by_name_in_collection(item_name, cons_cart)
-  if !item
-    cons_cart << cart[item_index]
-    
-  end
+  item = cart[item_index][:item]
+  price = cart[item_index][:price]
+  clearance = cart[item_index][:clearance]
+  cons_cart << item = {:price => price, :clearance => clearance, :cou
   item_index += 1
  end
  cons_cart
