@@ -69,7 +69,7 @@ def apply_clearance(cart)
     clearance = cart[index][:clearance]
     price = cart[index][:price]
     if clearance == true
-      price = (price * .8)
+      price = (price * 0.8)
     end
   index += 1
   end
